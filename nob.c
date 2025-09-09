@@ -1,3 +1,4 @@
+#include <stddef.h>
 #define NOB_STRIP_PREFIX
 #define NOB_IMPLEMENTATION
 #include "./extern/nob.h"
@@ -23,6 +24,7 @@ int main(int argc, char** argv) {
     }
 
     cmd_append(&cmd, BUILD_FOLDER"cerdeb");
+    for (int i = 1; i < argc; ++i) cmd_append(&cmd, argv[i]);
     if (!cmd_run(&cmd)) return 1;
 
     return 0;
