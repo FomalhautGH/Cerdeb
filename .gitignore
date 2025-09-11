@@ -1,5 +1,7 @@
 test/
 output/
 build/
+gf/
 nob
 nob.old
+Makefile
